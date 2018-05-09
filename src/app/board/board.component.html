@@ -1,0 +1,17 @@
+<h3>angular ngrx/store tutorial</h3>
+
+user:    <input type="text" #user><br/>
+title:   <input type="text" #title><br/>
+content: <input type="text" #content><br/><br/>
+
+<button (click)="createBoard(user.value, title.value, content.value)">create board</button>
+
+<ul *ngFor="let board of boards$ | async; let i = index;">
+    <li>
+        <span (click)="showContent(board, i)">{{board.user}}: {{board.title}}</span>
+    </li>
+</ul>
+
+<div *ngIf="isShowDetail">
+    <app-detail-board #detail (update)="updateBoard($event)" (delete)="deleteBoard($event)"></app-detail-board>
+</div>

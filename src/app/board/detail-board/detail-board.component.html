@@ -1,0 +1,8 @@
+<div *ngIf="board.content && isDetailShow">
+    <span *ngIf="!isUpdateMode" (click)="updateMode()">{{board.content}}</span>
+    <div *ngIf="isUpdateMode" style="display: inline-block">
+        <input type="text" [(ngModel)]="board.content">
+        <button (click)="updateBoard()">update</button>        
+    </div>
+    <button (click)="deleteBoard()">delete</button>
+</div>
