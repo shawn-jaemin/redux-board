@@ -9,19 +9,21 @@ export interface BoardModel {
     idx?: number;
 }
 
-class CreateBoard implements Action {
-    readonly type: string = ActionType.CREATE_BOARD
-    constructor(public payload: BoardModel) {}
-}
+// class CreateBoard implements Action {
+//     readonly type: string = ActionType.CREATE_BOARD
+//     constructor(public payload: BoardModel) {
+//         console.log('create board', payload);
+//     }
+// }
 
-class DeleteBoard implements Action {
-    readonly type: string = ActionType.DELETE_BOARD
-    constructor(public payload: BoardModel) {}
-}
+// class DeleteBoard implements Action {
+//     readonly type: string = ActionType.DELETE_BOARD
+//     constructor(public payload: number) {}
+// }
 
-class UpdateBoard implements Action {
-    readonly type: string = ActionType.UPDATE_BOARD
-    constructor(public payload: BoardModel) {}
-}
+// class UpdateBoard implements Action {
+//     readonly type: string = ActionType.UPDATE_BOARD
+//     constructor(public payload: BoardModel) {}
+// }
 
-export type Actions = CreateBoard | DeleteBoard | UpdateBoard;
+// export type Actions = CreateBoard | DeleteBoard | UpdateBoard;

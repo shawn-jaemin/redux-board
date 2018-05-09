@@ -1,6 +1,6 @@
 import { ActionReducer } from "@ngrx/store";
 
-import { BoardModel, Actions } from "./board.type";
+import { BoardModel } from "./board.type";
 import * as ActionType from '../app-state.constants';
 
 const initialState = {
@@ -24,3 +24,4 @@ export const reducer: ActionReducer<BoardModel[]> = (state: BoardModel[] = [init
             return state;
     }
 }
+
