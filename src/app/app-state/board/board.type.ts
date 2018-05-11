@@ -11,9 +11,7 @@ export interface BoardModel {
 
 // class CreateBoard implements Action {
 //     readonly type: string = ActionType.CREATE_BOARD
-//     constructor(public payload: BoardModel) {
-//         console.log('create board', payload);
-//     }
+//     constructor(public payload: BoardModel) {}
 // }
 
 // class DeleteBoard implements Action {

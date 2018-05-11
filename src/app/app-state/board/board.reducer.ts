@@ -10,7 +10,6 @@ const initialState = {
 }
 
 export const boardReducer: ActionReducer<BoardModel[]> = (state: BoardModel[] = [initialState], action: any) => {
-    console.log(action, state);
     switch (action.type) {
         case ActionType.CREATE_BOARD:
             return [...state, action.payload];

@@ -1,7 +1,6 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-
 import { StoreModule } from "@ngrx/store";
 
 import { AppComponent } from './app.component';
@@ -15,6 +14,7 @@ import { BoardActions } from "./app-state/board/board.action";
 import { UserActions } from "./app-state/user/user.action";
 import { StateManager } from "./app-state/app-state-manager.service";
 
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -27,8 +27,10 @@ import { StateManager } from "./app-state/app-state-manager.service";
     BrowserModule,
     FormsModule,
     StoreModule.forRoot({
-      board: boardReducer, user: userReducer
-    })
+      board: boardReducer, 
+      user: userReducer
+    }),
+    environment.imports
   ],
   providers: [    
     BoardActions,
