@@ -5,11 +5,14 @@ import { FormsModule } from '@angular/forms';
 import { StoreModule } from "@ngrx/store";
 
 import { AppComponent } from './app.component';
+import { UserComponent } from './user/user.component';
 import { BoardComponent } from './board/board.component';
 import { DetailBoardComponent } from './board/detail-board/detail-board.component';
 
-import { reducer } from "./app-state/board/board.reducer";
+import { boardReducer } from "./app-state/board/board.reducer";
+import { userReducer} from "./app-state/user/user.reducer";
 import { BoardActions } from "./app-state/board/board.action";
+import { UserActions } from "./app-state/user/user.action";
 import { StateManager } from "./app-state/app-state-manager.service";
 
 
@@ -17,15 +20,19 @@ import { StateManager } from "./app-state/app-state-manager.service";
   declarations: [
     AppComponent,
     BoardComponent,
-    DetailBoardComponent
+    DetailBoardComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    StoreModule.forRoot({board: reducer})
+    StoreModule.forRoot({
+      board: boardReducer, user: userReducer
+    })
   ],
   providers: [    
     BoardActions,
+    UserActions,
     StateManager
   ],
   bootstrap: [AppComponent]

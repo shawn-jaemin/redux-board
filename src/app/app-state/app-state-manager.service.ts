@@ -10,4 +10,8 @@ export class StateManager {
     getBoard() {
         return this.store.select('board');
     }
+
+    getUser() {
+        return this.store.select('user');
+    }
 }

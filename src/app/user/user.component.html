@@ -1,0 +1,11 @@
+user:    <input type="text" #id><br/>
+title:   <input type="text" #pwd><br/>
+content: <input type="text" #name><br/><br/>
+
+<button (click)="createUser(id.value, pwd.value, name.value)">create user</button>
+
+<ul *ngFor="let user of users$ | async; let i = index;">
+    <li>
+        <span>{{user.id}}: {{user.name}}</span> <button (click)="deleteUser(i)">delete user</button>
+    </li>
+</ul>
