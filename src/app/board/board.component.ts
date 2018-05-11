@@ -25,7 +25,7 @@ export class BoardComponent {
         this.boards$ = stateManager.getBoard();
     }
 
-    createBoard(user, title, content) {
+    createBoard(user, title, content) { 
         this.boardActions.createBoard({user: user, title: title, content: content});
     }
     
